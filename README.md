@@ -75,17 +75,18 @@ By setting `checkJS` to true in `jsconfig.json`, we get intellisense and type ch
 
 🔥 This project loads PIXIJS as a module from `./js/libraries/pixi.mjs`!
 
-You can find this module if you run `npm install pixi-js` and then open the `node_modules` folder. This contains the native pixi module in `node_modules/pixi.js/dist/esm/pixi.js`. 
-
-The type definitions are in `node_modules/pixi.js/index.d.ts`. You can copy these files and then discard the `node_modules` folder. In your project you can then use:
+You can find this module if you temporarily run `npm install pixi-js`. Then copy the native pixi module from `node_modules/pixi.js/dist/esm/pixi.js` to your own project. Now you can `import` pixi just like your other modules.
 
 ```typescript
 import { Application, Sprite, Loader } from './mygame/pixi.mjs'
 ```
+<br>
+<br>
+<br>
 
-### 💀 TODO
+### 💀 TODO Code completion for Pixi
 
-The `index.d.ts` type definitions seem not to be recognised, or are not up to date, because some pixi functions will not get auto completed in VS Code. They WILL work though.
+The type definitions for Pixi are in `node_modules/pixi.js/index.d.ts` but they reference the `node_modules` folder. It seems that *just for type checking* you need the whole `node_modules` folder and a `package.json`... 😖
 
 <br>
 <br>
