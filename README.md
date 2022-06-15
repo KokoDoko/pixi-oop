@@ -67,7 +67,7 @@ By setting `checkJS` to true in `jsconfig.json`, we get intellisense and type ch
 
 ### TODO
 
-To get type checking working for PIXIJS, you need type definitions for Pixi 5. You could get this by creating a `package.json` and installing pixi with `npm install pixi-js`. Now all of pixi is in the `node_modules` folder, although we only use it to get `type` information.
+To get type checking working for PIXIJS, you need type definitions for Pixi 5. You could get this by creating a `package.json` and installing pixi with `npm install pixi-js`. Visual Studio Code should now use the type information from the `node_modules` folder, even though we do not actually use the pixi library from `node_modules`
 
 <br>
 <br>
