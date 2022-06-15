@@ -1,4 +1,4 @@
-import { Sprite } from './libraries/pixi.mjs'
+import { Sprite } from './pixi/pixi.mjs'
 
 export class Block extends Sprite {
 

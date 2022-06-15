@@ -1,4 +1,4 @@
-import { Application, Sprite, Loader, SCALE_MODES, TilingSprite } from './libraries/pixi.mjs';
+import { Application, Loader, TilingSprite } from './pixi/pixi.mjs';
 import { Block } from "./block.js"
 import { HealthBar } from "./healthbar.js"
 import { Player } from "./player.js"
@@ -12,6 +12,7 @@ class Game {
     pixi
 
     constructor(){
+
         
         //this.pixi = new PIXI.Application({ width: 1200, height: 800 })
         this.pixi = new Application({width: 1200, height: 800})

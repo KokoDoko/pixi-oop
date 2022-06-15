@@ -86,7 +86,7 @@ import { Application, Sprite, Loader } from './mygame/pixi.mjs'
 
 ### 💀 TODO Code completion for Pixi
 
-The type definitions for Pixi are in `node_modules/pixi.js/index.d.ts` but they reference the `node_modules` folder. It seems that *just for type checking* you need the whole `node_modules` folder and a `package.json`... 😖
+The type definitions for Pixi are in `node_modules/pixi.js/index.d.ts` but they reference the `node_modules` folder. If you rename the file to `js/pixi.mjs.d.ts` VS Code will recognise it, but it still needs the whole `node_modules` folder and a `package.json` *just for type checking* 😖...
 
 <br>
 <br>
