@@ -1,4 +1,6 @@
-export class Player extends PIXI.Sprite {
+import { Sprite } from '../libraries/pixi.mjs'
+
+export class Player extends Sprite {
 
     #xspeed = 0
     #yspeed = 0

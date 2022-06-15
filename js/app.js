@@ -1,3 +1,4 @@
+import { Application, Sprite, TilingSprite, Loader, SCALE_MODES } from '../libraries/pixi.mjs'
 import { Block } from "./block.js"
 import { HealthBar } from "./healthbar.js"
 import { Player } from "./player.js"
@@ -11,19 +12,19 @@ class Game {
     pixi
 
     constructor(){
-        this.pixi = new PIXI.Application({width: 1200, height: 800})
+        this.pixi = new Application({width: 1200, height: 800})
         document.body.appendChild(this.pixi.view)
-
-        const loader = new PIXI.Loader()
-        loader.add('background', './images/background.png')
+        
+        //const loader = new Loader()
+        this.pixi.loader.add('background', './images/background.png')
               .add('ship', './images/ship.png')
               .add('block', './images/block.png')
 
-        loader.load((loader, resources)=>this.doneLoading(loader, resources))
+        this.pixi.loader.load((loader, resources)=>this.doneLoading(loader, resources))
     }
 
     doneLoading(loader, resources) {
-        this.background = new PIXI.TilingSprite(resources.background.texture, 1200, 800)
+        this.background = new TilingSprite(resources.background.texture, 1200, 800)
         this.pixi.stage.addChild(this.background)
 
         this.player = new Player(resources.ship.texture)

@@ -1,4 +1,6 @@
-export class Block extends PIXI.Sprite {
+import { Sprite } from '../libraries/pixi.mjs'
+
+export class Block extends Sprite {
 
     #speed = 0
 

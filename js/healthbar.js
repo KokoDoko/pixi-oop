@@ -1,4 +1,6 @@
-export class HealthBar extends PIXI.Graphics {
+import { Graphics } from '../libraries/pixi.mjs'
+
+export class HealthBar extends Graphics {
 
     #health = 400
 
