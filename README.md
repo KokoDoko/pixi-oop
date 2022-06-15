@@ -11,6 +11,8 @@ This is an experiment to build an OOP game in PIXIJS using Javascript classes an
 You can extend ***pixi graphics, sprites, tilingsprites, text***, etc. This makes the code very readable. This example shows a player sprite that has a `speed` and an `update` method:
 
 ```javascript
+import { Sprite } from './mygame/pixi.mjs'
+
 export class Player extends Sprite {
 
     #speed
@@ -71,12 +73,14 @@ By setting `checkJS` to true in `jsconfig.json`, we get intellisense and type ch
 
 ## Native PIXI module
 
-You can temporarily run `npm install pixi-js` to get the `node_modules` folder. This contains the native pixi module in `node_modules/pixi.js/dist/esm/pixi.js`. 
+🔥 This project loads PIXIJS as a module from `./js/libraries/pixi.mjs`!
+
+You can find this module if you run `npm install pixi-js` and then open the `node_modules` folder. This contains the native pixi module in `node_modules/pixi.js/dist/esm/pixi.js`. 
 
 The type definitions are in `node_modules/pixi.js/index.d.ts`. You can copy these files and then discard the `node_modules` folder. In your project you can then use:
 
 ```typescript
-import { Application, Sprite, Loader } from './mygame/pixi.mjs';
+import { Application, Sprite, Loader } from './mygame/pixi.mjs'
 ```
 
 ### 💀 TODO
