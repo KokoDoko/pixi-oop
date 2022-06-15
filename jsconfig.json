@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "checkJs": true,
+        "allowSyntheticDefaultImports": true,
+        "target": "ES2022"
+    }
+}
