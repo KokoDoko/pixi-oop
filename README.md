@@ -1,6 +1,6 @@
 # Object Oriented PIXI in Javascript
 
-This is an experiment to build an OOP game in PIXIJS using Javascript classes and native ES6 modules, *without* using a build process. PixiJS is loaded with a `<script>` tag. There is no publish folder or compilation process 🤯. Just open `index.html` via a live server or localhost!
+This is an experiment to build an OOP game in PIXIJS using Javascript classes and native ES6 modules. There is no publish folder or compilation process 🤯. Just open `index.html` via a live server or localhost!
 
 <br>
 <br>
@@ -11,7 +11,7 @@ This is an experiment to build an OOP game in PIXIJS using Javascript classes an
 You can extend ***pixi graphics, sprites, tilingsprites, text***, etc. This makes the code very readable. This example shows a player sprite that has a `speed` and an `update` method:
 
 ```javascript
-export class Player extends PIXI.Sprite {
+export class Player extends Sprite {
 
     #speed
 
@@ -69,11 +69,19 @@ By setting `checkJS` to true in `jsconfig.json`, we get intellisense and type ch
 <br>
 <br>
 
-## 💀💀💀 Native module and type checking for PIXI
+## Native PIXI module
 
-Ideally, we should import PixiJS as a native module too. [There is a native module for Pixi 5](https://github.com/pixijs/pixijs/issues/6734) but not for 6?
+You can temporarily run `npm install pixi-js` to get the `node_modules` folder. This contains the native pixi module in `node_modules/pixi.js/dist/esm/pixi.js`. 
 
-Else we should include type definitions for Pixi6 as a `.d.ts` file. This is included in `node_modules` after running `npm install pixi-js`, but does not seem to be available separately.
+The type definitions are in `node_modules/pixi.js/index.d.ts`. You can copy these files and then discard the `node_modules` folder. In your project you can then use:
+
+```typescript
+import { Application, Sprite, Loader } from './mygame/pixi.mjs';
+```
+
+### 💀 TODO
+
+The `index.d.ts` type definitions seem not to be recognised, or are not up to date, because some pixi functions will not get auto completed in VS Code. They WILL work though.
 
 <br>
 <br>
