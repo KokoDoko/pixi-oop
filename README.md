@@ -1,6 +1,6 @@
 # Object Oriented PIXI in Javascript
 
-This is an experiment to build an OOP game in PIXIJS using Javascript classes and native ES6 modules, *without* using a build process. PixiJS is also loaded as a native module. There is no publish folder or compilation process 🤯. Just open `index.html` via a live server or localhost!
+This is an experiment to build an OOP game in PIXIJS using Javascript classes and native ES6 modules, *without* using a build process. PixiJS is loaded with a `<script>` tag. There is no publish folder or compilation process 🤯. Just open `index.html` via a live server or localhost!
 
 <br>
 <br>
@@ -65,11 +65,15 @@ Classes in ES6 are a very similar to classes in typescript or C#, but:
 
 By setting `checkJS` to true in `jsconfig.json`, we get intellisense and type checking in javascript.
 
-### TODO
+<br>
+<br>
+<br>
 
-[Get better type checking for native pixi module](https://github.com/pixijs/pixijs/issues/6734)
+## 💀💀💀 Native module and type checking for PIXI
 
-Or else, to get type checking working for PIXIJS, you could create a `package.json` and install pixi with `npm install pixi-js`. Visual Studio Code should now use the type information from the `node_modules` folder, even though we do not actually use the pixi library from `node_modules`...
+Ideally, we should import PixiJS as a native module too. [There is a native module for Pixi 5](https://github.com/pixijs/pixijs/issues/6734) but not for 6?
+
+Else we should include type definitions for Pixi6 as a `.d.ts` file. This is included in `node_modules` after running `npm install pixi-js`, but does not seem to be available separately.
 
 <br>
 <br>

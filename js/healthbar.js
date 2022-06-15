@@ -1,6 +1,6 @@
-import { Graphics } from '../libraries/pixi.mjs'
+//import { Graphics } from '../libraries/pixi.mjs' // SADLY THIS IS PIXI 5
 
-export class HealthBar extends Graphics {
+export class HealthBar extends PIXI.Graphics {
 
     #health = 400
 

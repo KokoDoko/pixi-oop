@@ -1,6 +1,6 @@
-import { Sprite } from '../libraries/pixi.mjs'
+// import { Sprite } from '../libraries/pixi.mjs' // SADLY THIS IS PIXI 5
 
-export class Block extends Sprite {
+export class Block extends PIXI.Sprite {
 
     #speed = 0
 
